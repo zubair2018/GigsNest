@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #f8f7f4;
+    color: #1a1a2e;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-brand hover:bg-brand-dark text-white font-dm font-medium px-4 py-2 rounded-lg transition-all duration-150 text-sm;
+  }
+  .btn-outline {
+    @apply border border-gray-200 bg-white hover:bg-gray-50 text-gray-700 font-dm font-medium px-4 py-2 rounded-lg transition-all duration-150 text-sm;
+  }
+  .card {
+    @apply bg-white border border-gray-100 rounded-xl p-4 shadow-sm;
+  }
+  .input {
+    @apply w-full border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand/20 focus:border-brand bg-white transition-all;
+  }
+  .label {
+    @apply block text-xs uppercase tracking-wide text-gray-400 font-medium mb-1;
+  }
+}
